@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Keval Mobile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --theme-color: red;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header img {
+      max-width: 150px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 10px 0 5px;
+    }
+
+    h3 {
+      margin: 0;
+      color: #666;
+      font-weight: normal;
+    }
+
+    section {
+      margin-top: 25px;
+    }
+
+    .services ul {
+      padding-left: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 20px;
+      background: var(--theme-color);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    footer {
+      margin-top: 30px;
+      padding-top: 15px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <img id="logo" src="https://drive.google.com/file/d/1Rg2-N8LOxSTqyFAwecombaIZ-P5718fw/view?usp=sharing" alt="Business Logo" />
+      <h1>Keval Mobile</h1>
+      <h3>Mobile services</h3>
+    </header>
+
+    <!-- SERVICES -->
+    <section class="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Mobile</li><li>Laptop repair</li>
+      </ul>
+    </section>
+
+    <!-- ADDRESS -->
+    <section>
+      <h2>Address</h2>
+      <p>Ahmedabad,Gujarat</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+      <h2>Contact Us</h2>
+      <p><strong>Phone:</strong> 9925926772</p>
+      <a class="btn" href="tel:9925926772">Call Now</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      &copy; Keval Mobile | All rights reserved
+    </footer>
+
+  </div>
+
+  <!-- HIDE LOGO IF EMPTY -->
+  <script>
+    const logo = document.getElementById("logo");
+    if (!logo.src || logo.src.includes("{{")) {
+      logo.style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
