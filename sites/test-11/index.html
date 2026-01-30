@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --theme-color: red;
+      --light-bg: #f8fafc;
+      --text-dark: #1f2937;
+      --text-muted: #6b7280;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--light-bg);
+      color: var(--text-dark);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      background: linear-gradient(135deg, var(--theme-color), #00000010);
+      color: #ffffff;
+    }
+
+    header img {
+      max-width: 120px;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 25px 30px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    section:last-child {
+      border-bottom: none;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      font-size: 20px;
+      color: var(--theme-color);
+    }
+
+    .services ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    .services li {
+      margin-bottom: 8px;
+      color: var(--text-muted);
+    }
+
+    .contact p {
+      margin: 8px 0;
+      color: var(--text-muted);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 22px;
+      background: var(--theme-color);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn.whatsapp {
+      background: #25d366;
+      margin-left: 10px;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px;
+      font-size: 14px;
+      color: var(--text-muted);
+      background: #f1f5f9;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      .btn.whatsapp {
+        margin-left: 0;
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <img id="logo" src="https://drive.google.com/uc?export=view&id=1d4TUHJMwvLOEJifFXtm7IAgvnDAM0764" alt="Business Logo" />
+      <h1>test</h1>
+      <p>test</p>
+    </header>
+
+    <!-- SERVICES -->
+    <section class="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>test</li><li>test</li>
+      </ul>
+    </section>
+
+    <!-- ADDRESS -->
+    <section>
+      <h2>Address</h2>
+      <p>Pratishtha hills</p>
+    </section>
+
+    <!-- MAP -->
+    <section class="map">
+      <h2>Location</h2>
+      <iframe
+        src="https://www.google.com/maps?q=Pratishtha hills&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+      <h2>Contact</h2>
+      <p><strong>Phone:</strong> +919925926772</p>
+
+      <a class="btn" href="tel:+919925926772">Call Now</a>
+
+      <a
+        class="btn whatsapp"
+        href="https://wa.me/+919925926772"
+        target="_blank"
+      >
+        Chat on WhatsApp
+      </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      &copy; test | All rights reserved
+    </footer>
+
+  </div>
+
+  <!-- HIDE LOGO IF EMPTY -->
+  <script>
+    const logo = document.getElementById("logo");
+    if (!logo.src || logo.src.includes("{{")) {
+      logo.style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
